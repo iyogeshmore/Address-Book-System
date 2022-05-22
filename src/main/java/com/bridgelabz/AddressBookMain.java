@@ -2,6 +2,6 @@ package com.bridgelabz;
 
 public class AddressBookMain {
     public static void main(String[] args) {
-        System.out.println("Welcome to address book program");
+        System.out.println("\n Welcome to Address Book System");
     }
 }
