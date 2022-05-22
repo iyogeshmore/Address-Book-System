@@ -61,12 +61,15 @@ public class AddressBook {
         }
         return -1;
     }
+
+    //Edit existing contact using name
+
     public void editContact() {
 
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print(" Please enter the first name: ");
-        String firstName = scan.next();
+        String firstName = scanner.next();
 
         int index = findContact(firstName);
 
@@ -75,5 +78,25 @@ public class AddressBook {
             return;
         }
         addressBook.set(index, inputDetails());
+    }
+
+    // Ability to delete a person from contacts
+
+    public void deleteContact() {
+
+        int index = findContact();
+
+        if (index == -1) {
+            System.out.println(" ERROR: No such contact");
+            return;
+        }
+
+        addressBook.remove(index);
+        System.out.println(" Contact deleted!");
+
+    }
+
+    private int findContact() {
+        return 0;
     }
 }
