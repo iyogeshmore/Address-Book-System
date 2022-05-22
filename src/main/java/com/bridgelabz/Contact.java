@@ -9,7 +9,9 @@ public class Contact {
     int zip;
     long phone;
     String email;
+
     // Parameterized class for creating object
+
     public Contact(String firstName, String lastName, String address, String city, String state, int zip, long phone,
                    String email) {
         super();
@@ -22,5 +24,15 @@ public class Contact {
         this.phone = phone;
         this.email = email;
     }
-
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    @Override
+    public String toString() {
+        return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
+                + ", state=" + state + ", zip=" + zip + ", phone=" + phone + ", email=" + email + "]";
+    }
 }
